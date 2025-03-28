@@ -8,7 +8,7 @@ function App() {
   return (
     <Stack h="100vh" >
       <Navbar />
-      <Container>
+      <Container maxW="900px">
         <TodoForm />
         <TodoList />
       </Container>
