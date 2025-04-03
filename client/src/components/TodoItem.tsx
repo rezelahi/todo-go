@@ -2,11 +2,7 @@ import { Badge, Box, Flex, Text } from "@chakra-ui/react";
 import { FaCheckCircle } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { useColorModeValue } from "@/components/ui/color-mode";
-
-type Todo = {
-  body: string;
-  completed: boolean;
-};
+import { Todo } from "@/components/TodoList";
 
 const TodoItem = ({ todo }: { todo: Todo }) => {
   const bgColor = useColorModeValue("gray.400", "gray.700");
@@ -21,7 +17,7 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
         p={2}
         borderRadius={"lg"}
         justifyContent={"space-between"}
-        bg={bgColor} 
+        bg={bgColor}
       >
         <Text
           color={todo.completed ? "green.200" : "yellow.100"}
