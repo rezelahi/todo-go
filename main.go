@@ -7,7 +7,6 @@ import (
 	"os"
 
 	"github.com/gofiber/fiber/v2"
-	"github.com/joho/godotenv"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -24,10 +23,10 @@ var collection *mongo.Collection
 
 func main() {
 	if os.Getenv("ENV") != "production" {
-		err := godotenv.Load(".env")
-		if err != nil {
-			log.Fatal("Error Loading .env file", err)
-		}
+		// err := godotenv.Load(".env")
+		// if err != nil {
+		// 	log.Fatal("Error Loading .env file", err)
+		// }
 	}
 	MONGODB_URI := os.Getenv("MONGODB_URI")
 	clientOptions := options.Client().ApplyURI(MONGODB_URI)
