@@ -1,4 +1,4 @@
-import { BASE_URL } from "@/App";
+// import { BASE_URL } from "@/App";
 import { Button, Flex, Input, Spinner } from "@chakra-ui/react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";

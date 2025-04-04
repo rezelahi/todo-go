@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md";
 import { useColorModeValue } from "@/components/ui/color-mode";
 import { Todo } from "@/components/TodoList";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { BASE_URL } from "@/App";
+// import { BASE_URL } from "@/App";
 
 const TodoItem = ({ todo }: { todo: Todo }) => {
   const bgColor = useColorModeValue("gray.400", "gray.700");
