@@ -15,7 +15,7 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
     mutationFn: async () => {
       if (todo.completed) return alert("Todo is Already Completed");
       try {
-        const res = await fetch(BASE_URL + `/todos/${todo._id}`, {
+        const res = await fetch(import.meta.env.VITE_API_BASE_URL + `/todos/${todo._id}`, {
           method: "PATCH",
         });
         const data = await res.json();
@@ -36,7 +36,7 @@ const TodoItem = ({ todo }: { todo: Todo }) => {
     mutationKey: ["deleteTodo"],
     mutationFn: async () => {
       try {
-        const res = await fetch(BASE_URL + `/todos/${todo._id}`, {
+        const res = await fetch(import.meta.env.VITE_API_BASE_URL + `/todos/${todo._id}`, {
           method: "DELETE",
         });
         const data = await res.json();
